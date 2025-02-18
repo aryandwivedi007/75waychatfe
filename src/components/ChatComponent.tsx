@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaPaperPlane } from "react-icons/fa"; // Send icon
+import { useParams } from "react-router-dom";
 
 type Message = {
   id: number;
@@ -8,10 +9,15 @@ type Message = {
 };
 
 const ChatComponent = () => {
+
   const [messages, setMessages] = useState<Message[]>([
     { id: 1, text: "Hey! How are you?", sender: "John" },
     { id: 2, text: "I'm good, thanks for asking!", sender: "You" },
   ]);
+
+  const {groupId}=useParams()
+  console.log(groupId)
+  
   const [newMessage, setNewMessage] = useState<string>("");
 
   const handleSendMessage = () => {
