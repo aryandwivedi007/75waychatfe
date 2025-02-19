@@ -39,7 +39,7 @@ export default function AuthenticatedLayout() {
   return (
     <div className="flex-grow">
       {/* Header */}
-      <header className="bg-blue-600 text-white py-3">
+      <header className="bg-black text-white py-3">
         <div className="flex items-center px-6">
           {/* Menu Button (disabled) */}
           <button className="bg-transparent border-none text-white" disabled>
@@ -48,7 +48,7 @@ export default function AuthenticatedLayout() {
 
           {/* Logo */}
           <Link to="/" className="flex gap-2 items-center text-white text-xl ml-4">
-            <h1>App Logo</h1>
+            <h1>My Chat App</h1>
           </Link>
 
           {/* User Profile Icon (only if authenticated) */}

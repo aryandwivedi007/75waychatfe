@@ -1,51 +1,50 @@
-# React + TypeScript + Vite
+# 75WayChat (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend repository for the 75WayChat application. It allows users to engage in real-time chat, create public or private groups, and send messages within different chat rooms.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Real-time chat** with socket.io integration.
+- **Private and Public Groups** with distinct UI representations (Private with Incognito Mask, Public with Globe).
+- **User-friendly messaging interface** with message input, sent messages, and group details.
+- **Socket event handling** for message broadcasting between users.
+- **Responsive UI** for both mobile and desktop screens.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## Tech Stack
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React**: Frontend UI library for building interactive user interfaces.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Framer Motion**: Library for animations in React.
+- **Socket.IO**: Real-time bidirectional communication between frontend and backend.
+- **React Router**: For navigation between different pages.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Getting Started
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# 75waychatfe
+### Prerequisites
+
+Make sure you have the following installed:
+
+- **Node.js** (v20 or above)
+- **npm** (v9 or above) or **yarn** (for package management)
+
+### Installation
+
+1. **Clone the repository** to your local machine:
+   ```bash
+   git clone https://github.com/aryandwivedi007/75waychatfe.git
+
+  ```bash
+  cd 75waychatfe
+
+  ```bash
+  npm install
+
+
+  ```bash
+  npm run dev
